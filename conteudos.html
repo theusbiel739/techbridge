@@ -1,0 +1,410 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <title>TechBridge | Conteúdos</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --bg2:#111936;
+      --card:rgba(255,255,255,.06);
+      --purple:#8b5cf6;
+      --cyan:#22d3ee;
+      --text:#f5f7ff;
+      --muted:#b8c0d9;
+      --line:rgba(255,255,255,.12);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(139,92,246,.32), transparent 32%),
+        radial-gradient(circle at bottom left, rgba(34,211,238,.18), transparent 35%),
+        linear-gradient(135deg,var(--bg),var(--bg2));
+      color:var(--text);
+      min-height:100vh;
+    }
+
+    header{
+      width:100%;
+      padding:24px 8%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-bottom:1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .logo{
+      font-size:1.4rem;
+      letter-spacing:2px;
+      font-weight:700;
+      color:var(--text);
+      text-decoration:none;
+    }
+
+    .logo span{color:var(--cyan)}
+
+    nav a{
+      color:var(--muted);
+      text-decoration:none;
+      margin-left:22px;
+      font-size:.9rem;
+      transition:.3s;
+    }
+
+    nav a:hover, nav a.active{color:var(--cyan)}
+
+    .hero{
+      padding:70px 8% 45px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .tag{
+      display:inline-block;
+      padding:8px 14px;
+      border:1px solid rgba(34,211,238,.5);
+      border-radius:999px;
+      color:var(--cyan);
+      font-size:.85rem;
+      margin-bottom:20px;
+      background:rgba(34,211,238,.08);
+    }
+
+    h1{
+      font-size:3rem;
+      line-height:1.1;
+      margin-bottom:18px;
+    }
+
+    h1 span{
+      background:linear-gradient(90deg,var(--purple),var(--cyan));
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+
+    .hero p{
+      color:var(--muted);
+      font-size:1.05rem;
+      line-height:1.7;
+      max-width:700px;
+    }
+
+    .info-box{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:30px;
+      box-shadow:0 0 35px rgba(139,92,246,.20);
+    }
+
+    .info-box h3{
+      color:var(--cyan);
+      margin-bottom:14px;
+      font-size:1.3rem;
+    }
+
+    .info-box p{
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .section{
+      padding:35px 8% 70px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:34px;
+    }
+
+    .section-title h2{
+      font-size:2.2rem;
+      margin-bottom:12px;
+    }
+
+    .section-title p{
+      color:var(--muted);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:26px;
+      min-height:285px;
+      position:relative;
+      overflow:hidden;
+      transition:.3s;
+    }
+
+    .card:before{
+      content:"";
+      position:absolute;
+      width:115px;
+      height:115px;
+      right:-45px;
+      top:-45px;
+      background:linear-gradient(135deg,var(--purple),var(--cyan));
+      filter:blur(32px);
+      opacity:.34;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(34,211,238,.55);
+      box-shadow:0 0 28px rgba(34,211,238,.16);
+    }
+
+    .icon{
+      width:46px;
+      height:46px;
+      border-radius:16px;
+      background:linear-gradient(135deg,var(--purple),var(--cyan));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.35rem;
+      margin-bottom:18px;
+    }
+
+    .card h3{
+      font-size:1.25rem;
+      margin-bottom:12px;
+    }
+
+    .card p{
+      color:var(--muted);
+      line-height:1.6;
+      margin-bottom:18px;
+    }
+
+    details{
+      margin-top:14px;
+      color:var(--muted);
+    }
+
+    summary{
+      cursor:pointer;
+      color:var(--cyan);
+      font-weight:700;
+      list-style:none;
+    }
+
+    summary::-webkit-details-marker{display:none}
+
+    details p{
+      margin-top:12px;
+      font-size:.95rem;
+    }
+
+    .highlight{
+      margin-top:60px;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:34px;
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .highlight-visual{
+      min-height:250px;
+      border-radius:24px;
+      background:
+        radial-gradient(circle, rgba(139,92,246,.55), transparent 42%),
+        linear-gradient(135deg, rgba(34,211,238,.18), rgba(139,92,246,.18));
+      border:1px solid rgba(34,211,238,.35);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:25px;
+      font-size:2.5rem;
+    }
+
+    .highlight-text h2{
+      margin-bottom:14px;
+      font-size:2rem;
+    }
+
+    .highlight-text p{
+      color:var(--muted);
+      line-height:1.7;
+      margin-bottom:18px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 20px;
+      border-radius:999px;
+      color:var(--text);
+      text-decoration:none;
+      background:linear-gradient(90deg,var(--purple),var(--cyan));
+      font-size:.9rem;
+      font-weight:700;
+    }
+
+    footer{
+      padding:28px 8%;
+      text-align:center;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+    }
+
+    @media(max-width:900px){
+      .hero,.highlight{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      h1{font-size:2.35rem}
+      header{flex-direction:column;gap:18px}
+      nav a{margin:0 8px}
+    }
+
+    @media(max-width:600px){
+      .grid{grid-template-columns:1fr}
+      h1{font-size:2rem}
+      nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+      nav a{margin:0}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">TECH<span>BRIDGE</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="aulas.html">Aulas</a>
+      <a href="conteudos.html" class="active">Conteúdos</a>
+      <a href="questionarioCerto.html">Questionário</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <span class="tag">Conteúdos rápidos e educativos</span>
+      <h1>Informação digital em formato <span>simples e direto</span></h1>
+      <p>
+        A área de conteúdos reúne dicas, explicações e orientações sobre tecnologia,
+        segurança digital, serviços online e inteligência artificial. Tudo foi pensado
+        para ajudar usuários iniciantes a entenderem melhor o mundo digital.
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>Por que essa página existe?</h3>
+      <p>
+        Nem todo aprendizado precisa começar com uma aula longa. Aqui, o usuário encontra
+        textos curtos e práticos para consultar sempre que tiver dúvida.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <h2>Biblioteca TechBridge</h2>
+      <p>Conteúdos essenciais para inclusão digital e uso consciente da tecnologia.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="icon">🧠</div>
+        <h3>O que é Inteligência Artificial?</h3>
+        <p>A IA é uma tecnologia capaz de realizar tarefas que antes dependiam apenas de pessoas.</p>
+        <details>
+          <summary>Ler mais</summary>
+          <p>Ela pode ajudar em pesquisas, criação de textos, organização de ideias, atendimento e automação de tarefas. O uso deve ser responsável, com revisão humana.</p>
+        </details>
+      </article>
+
+      <article class="card">
+        <div class="icon">🔒</div>
+        <h3>Segurança digital básica</h3>
+        <p>Pequenos cuidados ajudam a evitar golpes, invasões e perda de informações pessoais.</p>
+        <details>
+          <summary>Ler mais</summary>
+          <p>Use senhas fortes, evite clicar em links suspeitos, não compartilhe códigos recebidos por SMS e confira se o site é confiável.</p>
+        </details>
+      </article>
+
+      <article class="card">
+        <div class="icon">📱</div>
+        <h3>Tecnologia no dia a dia</h3>
+        <p>Celulares, aplicativos e internet facilitam tarefas comuns da rotina.</p>
+        <details>
+          <summary>Ler mais</summary>
+          <p>A tecnologia pode ajudar no trabalho, nos estudos, no contato com outras pessoas, no acesso a bancos, serviços públicos e informações importantes.</p>
+        </details>
+      </article>
+
+      <article class="card">
+        <div class="icon">🌐</div>
+        <h3>Como navegar melhor</h3>
+        <p>Entender a internet ajuda o usuário a encontrar informações com mais confiança.</p>
+        <details>
+          <summary>Ler mais</summary>
+          <p>Use palavras-chave simples, verifique a fonte das informações e evite fornecer dados pessoais em páginas desconhecidas.</p>
+        </details>
+      </article>
+
+      <article class="card">
+        <div class="icon">✉️</div>
+        <h3>E-mail e comunicação</h3>
+        <p>O e-mail ainda é uma ferramenta importante para trabalho, estudos e cadastros.</p>
+        <details>
+          <summary>Ler mais</summary>
+          <p>Com ele é possível enviar mensagens, receber documentos, recuperar senhas e participar de processos seletivos.</p>
+        </details>
+      </article>
+
+      <article class="card">
+        <div class="icon">🤝</div>
+        <h3>Inclusão digital</h3>
+        <p>Inclusão digital é permitir que mais pessoas tenham acesso e saibam usar tecnologia.</p>
+        <details>
+          <summary>Ler mais</summary>
+          <p>Ela contribui para reduzir desigualdades, ampliar oportunidades e facilitar o acesso a serviços digitais essenciais.</p>
+        </details>
+      </article>
+    </div>
+
+    <div class="highlight">
+         <div class="video-box" style="height:auto; padding:0; overflow:hidden; border:none;">
+        <video controls width="100%" style="border-radius:22px; display:block;">
+          <source src="images\Video_IA.mp4" type="video/mp4">
+          Seu navegador não suporta vídeos.
+        </video>
+      </div>
+
+     <div class="highlight-text">
+        <h2>Uso consciente da IA</h2>
+        <p>
+          A inteligência artificial pode ser uma grande aliada no aprendizado, mas deve ser usada
+          com responsabilidade. O usuário precisa entender que a IA auxilia, mas não substitui o
+          pensamento crítico, a pesquisa e a revisão das informações.
+        </p>
+        <a href="aulas.html" class="btn">Ver aulas</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    TechBridge © 2026 | Conteúdos para Inclusão Digital
+  </footer>
+</body>
+</html>

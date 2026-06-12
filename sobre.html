@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <title>TechBridge | Sobre</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <style>
+    :root{
+      --bg:#0b1020; --bg2:#111936; --card:rgba(255,255,255,.06);
+      --purple:#8b5cf6; --cyan:#22d3ee; --text:#f5f7ff;
+      --muted:#b8c0d9; --line:rgba(255,255,255,.12);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(139,92,246,.35), transparent 34%),
+        radial-gradient(circle at bottom left, rgba(34,211,238,.20), transparent 36%),
+        linear-gradient(135deg,var(--bg),var(--bg2));
+      color:var(--text); min-height:100vh;
+    }
+    header{
+      width:100%; padding:24px 8%; display:flex; align-items:center;
+      justify-content:space-between; border-bottom:1px solid var(--line);
+    }
+    .logo{font-size:1.4rem;letter-spacing:2px;font-weight:700;color:var(--text);text-decoration:none}
+    .logo span{color:var(--cyan)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:.9rem;transition:.3s}
+    nav a:hover, nav a.active{color:var(--cyan)}
+    .hero{
+      padding:75px 8% 45px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:40px;
+      align-items:center;
+    }
+    .tag{
+      display:inline-block;padding:8px 14px;border:1px solid rgba(34,211,238,.5);
+      border-radius:999px;color:var(--cyan);font-size:.85rem;margin-bottom:20px;
+      background:rgba(34,211,238,.08);
+    }
+    h1{font-size:3rem;line-height:1.1;margin-bottom:18px}
+    h1 span{background:linear-gradient(90deg,var(--purple),var(--cyan));-webkit-background-clip:text;color:transparent}
+    p{color:var(--muted);line-height:1.7}
+    .hero p{font-size:1.05rem;max-width:680px}
+    .glass{
+      background:var(--card);border:1px solid var(--line);border-radius:28px;
+      padding:32px;box-shadow:0 0 35px rgba(139,92,246,.20);
+    }
+    .glass h3{color:var(--cyan);margin-bottom:14px}
+    .glass ul{list-style:none}
+    .glass li{padding:12px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+    .glass li:last-child{border-bottom:0}
+    .section{padding:35px 8% 70px}
+    .title{text-align:center;margin-bottom:35px}
+    .title h2{font-size:2.2rem;margin-bottom:12px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .card{
+      background:var(--card);border:1px solid var(--line);border-radius:24px;
+      padding:28px;min-height:235px;position:relative;overflow:hidden;transition:.3s;
+    }
+    .card:before{
+      content:"";position:absolute;width:120px;height:120px;right:-45px;top:-45px;
+      background:linear-gradient(135deg,var(--purple),var(--cyan));filter:blur(32px);opacity:.32;
+    }
+    .card:hover{transform:translateY(-6px);border-color:rgba(34,211,238,.55);box-shadow:0 0 28px rgba(34,211,238,.16)}
+    .icon{
+      width:46px;height:46px;border-radius:16px;background:linear-gradient(135deg,var(--purple),var(--cyan));
+      display:flex;align-items:center;justify-content:center;font-size:1.35rem;margin-bottom:18px;
+    }
+    .card h3{margin-bottom:12px;font-size:1.25rem}
+    .impact{
+      margin-top:55px;background:var(--card);border:1px solid var(--line);border-radius:28px;
+      padding:34px;display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:center;
+    }
+    .impact-visual{
+      min-height:250px;border-radius:24px;border:1px solid rgba(34,211,238,.35);
+      background:radial-gradient(circle, rgba(139,92,246,.50), transparent 45%),
+                 linear-gradient(135deg, rgba(34,211,238,.18), rgba(139,92,246,.18));
+      display:flex;align-items:center;justify-content:center;text-align:center;font-size:2.3rem;font-weight:700;
+    }
+    .impact h2{font-size:2rem;margin-bottom:14px}
+    .btn{
+      display:inline-block;margin-top:18px;padding:12px 20px;border-radius:999px;color:white;
+      text-decoration:none;background:linear-gradient(90deg,var(--purple),var(--cyan));font-weight:700;
+    }
+    footer{padding:28px 8%;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
+    @media(max-width:900px){
+      .hero,.impact{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}
+      h1{font-size:2.35rem}header{flex-direction:column;gap:18px}nav a{margin:0 8px}
+    }
+    @media(max-width:600px){
+      .grid{grid-template-columns:1fr}h1{font-size:2rem}
+      nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}nav a{margin:0}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">TECH<span>BRIDGE</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sobre.html" class="active">Sobre</a>
+      <a href="aulas.html">Aulas</a>
+      <a href="conteudos.html">Conteúdos</a>
+      <a href="questionario.html">Questionário</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <span class="tag">Sobre o projeto</span>
+      <h1>Uma ponte para a <span>inclusão digital</span></h1>
+      <p>
+        O TechBridge é um projeto educacional criado para aproximar pessoas do mundo digital.
+        A proposta é oferecer conteúdos simples, aulas rápidas e atividades práticas para quem
+        deseja aprender tecnologia de forma acessível.
+      </p>
+    </div>
+
+    <div class="glass">
+      <h3>Resumo do TechBridge</h3>
+      <ul>
+        <li>Plataforma web educativa</li>
+        <li>Foco em tecnologia básica</li>
+        <li>Conteúdo simples e direto</li>
+        <li>Questionário dinâmico de aprendizagem</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="title">
+      <h2>Nossa proposta</h2>
+      <p>Transformar tecnologia em algo mais próximo, simples e possível.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="icon">🎯</div>
+        <h3>Objetivo</h3>
+        <p>Promover inclusão digital por meio de uma plataforma fácil de acessar e entender.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">👥</div>
+        <h3>Público-alvo</h3>
+        <p>Pessoas com pouco conhecimento digital que buscam autonomia no uso da tecnologia.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🤖</div>
+        <h3>IA com responsabilidade</h3>
+        <p>Apresentar a inteligência artificial como ferramenta de apoio, sempre com uso consciente.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">📚</div>
+        <h3>Aprendizado simples</h3>
+        <p>Conteúdos curtos, linguagem acessível e exemplos práticos para o dia a dia.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🔒</div>
+        <h3>Segurança digital</h3>
+        <p>Orientações sobre senhas, golpes, links suspeitos e proteção de dados pessoais.</p>
+      </article>
+
+      <article class="card">
+        <div class="icon">🌎</div>
+        <h3>Impacto social</h3>
+        <p>Contribuir para reduzir desigualdades e ampliar oportunidades por meio da tecnologia.</p>
+      </article>
+    </div>
+
+    <div class="impact">
+      <div class="impact-visual">ODS 9 + ODS 10</div>
+      <div>
+        <h2>Conexão com os ODS</h2>
+        <p>
+          O projeto se relaciona com os Objetivos de Desenvolvimento Sustentável ao incentivar
+          inovação, acesso à tecnologia e redução das desigualdades. A inclusão digital permite
+          que mais pessoas participem da sociedade conectada com mais autonomia.
+        </p>
+        <a href="aulas.html" class="btn">Começar pelas aulas</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    TechBridge © 2026 | Sobre o projeto
+  </footer>
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <title>TechBridge | Como criar currículo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --bg2:#111936;
+      --purple:#8b5cf6;
+      --cyan:#22d3ee;
+      --text:#f5f7ff;
+      --muted:#b8c0d9;
+      --line:rgba(255,255,255,.12);
+      --card:rgba(255,255,255,.06);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(139,92,246,.34), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(34,211,238,.20), transparent 35%),
+        linear-gradient(135deg,var(--bg),var(--bg2));
+      color:var(--text);
+      min-height:100vh;
+    }
+
+    header{
+      width:100%;
+      padding:24px 8%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(12px);
+    }
+
+    .logo{
+      font-size:1.4rem;
+      letter-spacing:2px;
+      font-weight:700;
+      color:var(--text);
+      text-decoration:none;
+    }
+
+    .logo span{color:var(--cyan)}
+
+    nav a{
+      color:var(--muted);
+      text-decoration:none;
+      margin-left:22px;
+      font-size:.9rem;
+      transition:.3s;
+    }
+
+    nav a:hover, nav a.active{color:var(--cyan)}
+
+    .hero{
+      padding:75px 8% 45px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .tag{
+      display:inline-block;
+      padding:8px 14px;
+      border:1px solid rgba(34,211,238,.5);
+      border-radius:999px;
+      color:var(--cyan);
+      font-size:.85rem;
+      margin-bottom:20px;
+      background:rgba(34,211,238,.08);
+    }
+
+    h1{
+      font-size:3rem;
+      line-height:1.1;
+      margin-bottom:18px;
+    }
+
+    h1 span{
+      background:linear-gradient(90deg,var(--purple),var(--cyan));
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+
+    p{
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .hero p{
+      font-size:1.05rem;
+      max-width:700px;
+    }
+
+    .hero-card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:32px;
+      box-shadow:0 0 35px rgba(139,92,246,.22);
+    }
+
+    .hero-card h3{
+      color:var(--cyan);
+      margin-bottom:14px;
+    }
+
+    .hero-card ul{
+      list-style:none;
+    }
+
+    .hero-card li{
+      color:var(--muted);
+      padding:12px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .hero-card li:last-child{border-bottom:0}
+
+    .section{
+      padding:35px 8% 70px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:36px;
+    }
+
+    .section-title h2{
+      font-size:2.2rem;
+      margin-bottom:12px;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:24px;
+    }
+
+    .step{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:26px;
+      padding:28px;
+      position:relative;
+      overflow:hidden;
+      transition:.3s;
+    }
+
+    .step:before{
+      content:"";
+      position:absolute;
+      width:120px;
+      height:120px;
+      right:-45px;
+      top:-45px;
+      background:linear-gradient(135deg,var(--purple),var(--cyan));
+      filter:blur(35px);
+      opacity:.30;
+    }
+
+    .step:hover{
+      transform:translateY(-5px);
+      border-color:rgba(34,211,238,.55);
+      box-shadow:0 0 28px rgba(34,211,238,.15);
+    }
+
+    .number{
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--purple),var(--cyan));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .step h3{
+      font-size:1.25rem;
+      margin-bottom:12px;
+    }
+
+    .step ul{
+      color:var(--muted);
+      padding-left:18px;
+      line-height:1.8;
+      margin-top:12px;
+    }
+
+    .image-placeholder{
+      margin-top:18px;
+      min-height:160px;
+      border:1px dashed rgba(34,211,238,.55);
+      border-radius:20px;
+      background:
+        linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+        radial-gradient(circle, rgba(139,92,246,.35), rgba(34,211,238,.10));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:var(--cyan);
+      padding:20px;
+      font-weight:700;
+    }
+
+
+    .lesson-img{
+      width:100%;
+      margin-top:18px;
+      border-radius:20px;
+      border:1px solid rgba(34,211,238,.35);
+      box-shadow:0 0 25px rgba(139,92,246,.25);
+      display:block;
+    }
+
+    .resume-example{
+      margin-top:55px;
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:34px;
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .resume-box{
+      background:#071023;
+      border:1px solid rgba(34,211,238,.35);
+      border-radius:22px;
+      padding:24px;
+      box-shadow:0 0 25px rgba(139,92,246,.20);
+    }
+
+    .resume-box h2{
+      margin-bottom:8px;
+      color:var(--cyan);
+    }
+
+    .resume-line{
+      margin-top:12px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .tips{
+      margin-top:34px;
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:28px;
+    }
+
+    .tips h2{
+      margin-bottom:16px;
+      color:var(--cyan);
+    }
+
+    .tips-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:18px;
+    }
+
+    .tip{
+      padding:20px;
+      border-radius:20px;
+      background:rgba(255,255,255,.05);
+      border:1px solid var(--line);
+    }
+
+    .tip h3{
+      margin-bottom:10px;
+    }
+
+    .actions{
+      margin-top:34px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 20px;
+      border-radius:999px;
+      color:var(--text);
+      text-decoration:none;
+      background:linear-gradient(90deg,var(--purple),var(--cyan));
+      font-size:.9rem;
+      font-weight:700;
+    }
+
+    .btn.secondary{
+      background:transparent;
+      border:1px solid rgba(34,211,238,.55);
+      color:var(--cyan);
+    }
+
+    footer{
+      padding:28px 8%;
+      text-align:center;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+    }
+
+    @media(max-width:900px){
+      .hero,.resume-example{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+      .tips-grid{grid-template-columns:1fr}
+      h1{font-size:2.35rem}
+      header{flex-direction:column;gap:18px}
+      nav a{margin:0 8px}
+    }
+
+    @media(max-width:600px){
+      h1{font-size:2rem}
+      nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+      nav a{margin:0}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo">TECH<span>BRIDGE</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="aulas.html" class="active">Aulas</a>
+      <a href="conteudos.html">Conteúdos</a>
+      <a href="questionarioCerto.html">Questionário</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <span class="tag">Aula 3 — Passo a passo</span>
+      <h1>Como criar um <span>currículo</span></h1>
+      <p>
+        O currículo é um documento importante para buscar oportunidades de trabalho.
+        Nesta aula, você vai aprender como organizar informações pessoais, experiências
+        e habilidades de forma simples e profissional.
+      </p>
+    </div>
+
+    <div class="hero-card">
+      <h3>Você vai aprender</h3>
+      <ul>
+        <li>Como organizar dados pessoais</li>
+        <li>Como escrever objetivo profissional</li>
+        <li>Como adicionar cursos e experiências</li>
+        <li>Como deixar o currículo mais profissional</li>
+        <li>Erros comuns para evitar</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <h2>Passo a passo</h2>
+      <p>Aprenda como criar um currículo simples, organizado e fácil de ler.</p>
+    </div>
+
+    <div class="steps">
+      <article class="step">
+        <div class="number">01</div>
+        <h3>Dados pessoais</h3>
+        <p>Comece colocando suas principais informações de contato.</p>
+        <ul>
+          <li>Nome completo</li>
+          <li>Telefone</li>
+          <li>E-mail profissional</li>
+          <li>Cidade onde mora</li>
+        </ul>
+        <img class="lesson-img" src="images/curriculo_dados_pessoais.png" alt="Exemplo de dados pessoais no currículo">
+      </article>
+
+      <article class="step">
+        <div class="number">02</div>
+        <h3>Objetivo profissional</h3>
+        <p>
+          O objetivo profissional deve mostrar qual área ou vaga você procura.
+        </p>
+        <ul>
+          <li>Escreva de forma simples</li>
+          <li>Evite textos muito longos</li>
+          <li>Seja claro e objetivo</li>
+        </ul>
+        <img class="lesson-img" src="images/curriculo_objetivo.png" alt="Exemplo de objetivo profissional no currículo">
+      </article>
+
+      <article class="step">
+        <div class="number">03</div>
+        <h3>Experiências e cursos</h3>
+        <p>
+          Adicione experiências profissionais, cursos e atividades importantes.
+        </p>
+        <ul>
+          <li>Nome da empresa ou curso</li>
+          <li>Período</li>
+          <li>Funções realizadas</li>
+        </ul>
+        <img class="lesson-img" src="images/curriculo_experiencias.png" alt="Exemplo de experiências e formação no currículo">
+      </article>
+
+      <article class="step">
+        <div class="number">04</div>
+        <h3>Habilidades</h3>
+        <p>
+          Liste conhecimentos que podem ajudar no trabalho.
+        </p>
+        <ul>
+          <li>Informática básica</li>
+          <li>Comunicação</li>
+          <li>Organização</li>
+          <li>Trabalho em equipe</li>
+        </ul>
+        <img class="lesson-img" src="images/curriculo_habilidades.png" alt="Exemplo de habilidades profissionais no currículo">
+      </article>
+    </div>
+
+    <div class="resume-example">
+      <div class="resume-box">
+        <h2>Ana Paula Souza</h2>
+
+        <div class="resume-line">
+          📞 (11) 99999-9999<br>
+          📧 anapaula@email.com<br>
+          📍 São Paulo - SP
+        </div>
+
+        <div class="resume-line">
+          <strong>Objetivo:</strong><br>
+          Atuar na área administrativa.
+        </div>
+
+        <div class="resume-line">
+          <strong>Cursos:</strong><br>
+          Informática Básica<br>
+          Atendimento ao Cliente
+        </div>
+
+        <div class="resume-line">
+          <strong>Habilidades:</strong><br>
+          Organização, comunicação e trabalho em equipe.
+        </div>
+      </div>
+
+      <div>
+        <h2>Exemplo simples de currículo</h2>
+        <p>
+          Um currículo não precisa ser complicado. O mais importante é organizar as
+          informações de forma clara, objetiva e fácil de entender.
+        </p>
+      </div>
+    </div>
+
+    <div class="tips">
+      <h2>Dicas importantes</h2>
+      <p>Pequenos cuidados podem deixar seu currículo mais profissional.</p>
+
+      <div class="tips-grid">
+        <div class="tip">
+          <h3>📄 Organização</h3>
+          <p>Mantenha o currículo limpo, com poucas cores e textos organizados.</p>
+        </div>
+
+        <div class="tip">
+          <h3>✍️ Ortografia</h3>
+          <p>Revise erros de português antes de enviar o currículo.</p>
+        </div>
+
+        <div class="tip">
+          <h3>📧 Contato</h3>
+          <p>Utilize um e-mail profissional e atualizado para receber respostas.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a href="email.html" class="btn secondary">Voltar para aula de e-mail</a>
+      <a href="aulas.html" class="btn">Voltar para aulas</a>
+      <a href="questionarioCurriculo.html" class="btn">Responder questionário</a>
+    </div>
+  </section>
+
+  <footer>
+    TechBridge © 2026 | Aula de Currículo
+  </footer>
+</body>
+</html>

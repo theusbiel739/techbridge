@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechBridge | Questionário Dinâmico</title>
+<style>
+body{font-family:Arial;background:#0b1020;color:#fff;margin:0}
+.container{max-width:950px;margin:auto;padding:40px 20px}
+.card{background:#111936;border:1px solid rgba(255,255,255,.1);padding:30px;border-radius:25px}
+h1{text-align:center}
+.question{margin:25px 0;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.1)}
+label{display:block;margin:10px 0;padding:12px;border-radius:14px;background:rgba(255,255,255,.05);cursor:pointer}
+button{padding:14px 20px;border:none;border-radius:999px;margin:10px;cursor:pointer;background:linear-gradient(90deg,#8b5cf6,#22d3ee);color:#fff;font-weight:bold}
+.correct{background:rgba(34,197,94,.2)!important}
+.wrong{background:rgba(239,68,68,.2)!important}
+#resultado{display:none;margin-top:20px;padding:20px;border-radius:18px;background:rgba(34,211,238,.1)}
+.correct{
+  background:rgba(34,197,94,.30)!important;
+  border:2px solid #22c55e!important;
+  box-shadow:0 0 18px rgba(34,197,94,.45);
+  color:#ffffff!important;
+}
+.wrong{
+  background:rgba(239,68,68,.30)!important;
+  border:2px solid #ef4444!important;
+  box-shadow:0 0 18px rgba(239,68,68,.45);
+  color:#ffffff!important;
+}
+.correct::before{
+  content:"✅ ";
+  font-weight:bold;
+}
+.wrong::before{
+  content:"❌ ";
+  font-weight:bold;
+}
+.feedback{
+  display:block;
+  margin-top:8px;
+  font-size:.9rem;
+  font-weight:bold;
+}
+.feedback.ok{color:#86efac}
+.feedback.erro{color:#fca5a5}
+.sem-resposta{
+  border:2px dashed #facc15!important;
+  background:rgba(250,204,21,.12)!important;
+}
+.sem-resposta::before{
+  content:"⚠️ ";
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="card">
+<h1>Questionário Dinâmico TechBridge</h1>
+<p>O sistema sorteia perguntas aleatórias a cada rodada.</p>
+
+<div id="quiz"></div>
+
+<button onclick="corrigirQuiz()">Enviar respostas</button>
+<button onclick="gerarQuiz()">Gerar nova rodada</button>
+
+<div id="resultado">
+<h2>Resultado</h2>
+<p id="textoResultado"></p>
+</div>
+</div>
+</div>
+
+<script>
+const bancoPerguntas = [
+{
+      pergunta: "Qual é o principal objetivo da inclusão digital?",
+      opcoes: ['Ensinar apenas programação avançada.', 'Permitir que mais pessoas tenham acesso e saibam usar tecnologia.', 'Substituir totalmente o atendimento humano.'],
+      correta: 1
+    },
+{
+      pergunta: "Qual atitude ajuda na segurança digital?",
+      opcoes: ['Usar a mesma senha em todos os sites.', 'Clicar em qualquer link recebido por mensagem.', 'Criar senhas fortes e desconfiar de links suspeitos.'],
+      correta: 2
+    },
+{
+      pergunta: "Para que serve um e-mail?",
+      opcoes: ['Enviar e receber mensagens, documentos e cadastros.', 'Apenas jogar online.', 'Somente tirar fotos.'],
+      correta: 0
+    },
+{
+      pergunta: "O que é Inteligência Artificial?",
+      opcoes: ['Tecnologia que auxilia em tarefas como textos, pesquisas e organização.', 'Um tipo de cabo de internet.', 'Um aplicativo usado apenas para música.'],
+      correta: 0
+    },
+{
+      pergunta: "Ao receber uma mensagem pedindo senha ou código, o correto é:",
+      opcoes: ['Enviar rapidamente.', 'Desconfiar, não compartilhar e verificar a fonte.', 'Encaminhar para todos os contatos.'],
+      correta: 1
+    },
+{
+      pergunta: "Qual é uma senha mais segura?",
+      opcoes: ['123456', 'Nome e data de nascimento.', 'Uma combinação de letras, números e símbolos.'],
+      correta: 2
+    },
+{
+      pergunta: "O que é um link suspeito?",
+      opcoes: ['Um link estranho enviado por fonte desconhecida.', 'Qualquer link de site conhecido.', 'Um endereço salvo nos favoritos.'],
+      correta: 0
+    },
+{
+      pergunta: "Por que devemos revisar respostas geradas por IA?",
+      opcoes: ['Porque a IA pode cometer erros.', 'Porque a IA sempre está errada.', 'Porque revisar nunca é necessário.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual exemplo mostra tecnologia no dia a dia?",
+      opcoes: ['Usar aplicativo de banco ou mapas.', 'Guardar papel em gaveta.', 'Desligar o celular para sempre.'],
+      correta: 0
+    },
+{
+      pergunta: "O que significa navegar na internet com consciência?",
+      opcoes: ['Acreditar em tudo que aparece.', 'Verificar fontes e proteger dados.', 'Compartilhar senhas com amigos.'],
+      correta: 1
+    },
+{
+      pergunta: "Qual cuidado é importante ao usar Wi‑Fi público?",
+      opcoes: ['Evitar acessar banco e senhas.', 'Fazer compras em qualquer site.', 'Desativar proteções do celular.'],
+      correta: 0
+    },
+{
+      pergunta: "Como a tecnologia ajuda no mercado de trabalho?",
+      opcoes: ['Facilitando comunicação e busca de vagas.', 'Impedindo aprendizado.', 'Servindo apenas para diversão.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual aplicativo é usado para chamadas de vídeo?",
+      opcoes: ['Calculadora', 'Aplicativo de reunião online', 'Lanterna'],
+      correta: 1
+    },
+{
+      pergunta: "O que é necessário para acessar um site?",
+      opcoes: ['Conexão com internet', 'Controle remoto', 'Pendrive'],
+      correta: 0
+    },
+{
+      pergunta: "O que um navegador faz?",
+      opcoes: ['Permite acessar páginas da internet.', 'Limpa a tela do computador.', 'Cria peças mecânicas.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual destes é um exemplo de golpe digital?",
+      opcoes: ['Mensagem falsa pedindo Pix.', 'Atualização do sistema.', 'Pesquisa escolar.'],
+      correta: 0
+    },
+{
+      pergunta: "Por que atualizar aplicativos é importante?",
+      opcoes: ['Para melhorar segurança e funcionamento.', 'Para gastar mais internet.', 'Porque deixa o celular pesado.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual destas ações protege seus dados?",
+      opcoes: ['Usar autenticação em duas etapas.', 'Compartilhar senhas.', 'Anotar senha em local público.'],
+      correta: 0
+    },
+{
+      pergunta: "O que é armazenamento em nuvem?",
+      opcoes: ['Guardar arquivos online.', 'Colocar arquivos em caixa física.', 'Apagar documentos.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual destes é um buscador da internet?",
+      opcoes: ['Google', 'Bluetooth', 'HDMI'],
+      correta: 0
+    },
+{
+      pergunta: "O que significa fazer download?",
+      opcoes: ['Baixar um arquivo.', 'Desligar a internet.', 'Formatar o computador.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual ferramenta ajuda a escrever textos?",
+      opcoes: ['Editor de texto', 'Lanterna', 'Cronômetro'],
+      correta: 0
+    },
+{
+      pergunta: "Para que serve um QR Code?",
+      opcoes: ['Abrir links e informações rapidamente.', 'Aumentar o volume.', 'Limpar a memória.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual destas opções é uma rede social?",
+      opcoes: ['Instagram', 'Excel', 'Bloco de notas'],
+      correta: 0
+    },
+{
+      pergunta: "O que devemos fazer antes de compartilhar notícia?",
+      opcoes: ['Verificar se a informação é verdadeira.', 'Compartilhar imediatamente.', 'Ignorar a fonte.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual destes é um exemplo de IA no cotidiano?",
+      opcoes: ['Assistente virtual', 'Caderno', 'Mousepad'],
+      correta: 0
+    },
+{
+      pergunta: "O que é phishing?",
+      opcoes: ['Tentativa de roubo de dados.', 'Tipo de antivírus.', 'Sistema operacional.'],
+      correta: 0
+    },
+{
+      pergunta: "Para que serve um antivírus?",
+      opcoes: ['Proteger o dispositivo contra ameaças.', 'Aumentar brilho da tela.', 'Melhorar câmera.'],
+      correta: 0
+    },
+{
+      pergunta: "O que é inclusão digital?",
+      opcoes: ['Permitir acesso e aprendizado tecnológico.', 'Proibir uso da internet.', 'Vender celulares.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual destas práticas é mais segura?",
+      opcoes: ['Criar senhas diferentes para cada conta.', 'Usar senha 123456.', 'Compartilhar login.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual é a função do botão compartilhar?",
+      opcoes: ['Enviar conteúdo para outras pessoas.', 'Desligar o celular.', 'Apagar aplicativos.'],
+      correta: 0
+    },
+{
+      pergunta: "O que é um aplicativo?",
+      opcoes: ['Programa instalado no celular ou computador.', 'Tipo de cabo.', 'Peça do teclado.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual destes serviços pode ser acessado online?",
+      opcoes: ['Banco digital', 'Somente rádio antiga', 'Máquina de escrever'],
+      correta: 0
+    },
+{
+      pergunta: "Por que a internet é importante nos estudos?",
+      opcoes: ['Facilita acesso a conteúdos e pesquisas.', 'Impede leitura.', 'Substitui professores totalmente.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual destas atitudes ajuda a evitar golpes?",
+      opcoes: ['Desconfiar de promessas exageradas.', 'Enviar dados pessoais para qualquer pessoa.', 'Clicar em todos os links.'],
+      correta: 0
+    },
+{
+      pergunta: "O que é um cadastro online?",
+      opcoes: ['Registro de informações em um site.', 'Tipo de jogo.', 'Atualização automática.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual destas ferramentas pode ajudar na organização?",
+      opcoes: ['Agenda digital', 'Lanterna', 'Calculadora simples'],
+      correta: 0
+    },
+{
+      pergunta: "O que significa login?",
+      opcoes: ['Entrar em uma conta usando usuário e senha.', 'Desligar o computador.', 'Apagar arquivos.'],
+      correta: 0
+    },
+{
+      pergunta: "Qual destes cuidados é importante nas redes sociais?",
+      opcoes: ['Evitar compartilhar dados pessoais.', 'Publicar senhas.', 'Aceitar qualquer link.'],
+      correta: 0
+    },
+{
+      pergunta: "Como a IA pode ajudar nos estudos?",
+      opcoes: ['Resumindo textos e auxiliando pesquisas.', 'Substituindo totalmente o aluno.', 'Desligando a internet.'],
+      correta: 0
+    }
+];
+
+let perguntasAtuais = [];
+
+function embaralhar(array){
+ return [...array].sort(() => Math.random() - 0.5);
+}
+
+function gerarQuiz(){
+ const area = document.getElementById("quiz");
+ const resultado = document.getElementById("resultado");
+ resultado.style.display = "none";
+ area.innerHTML = "";
+
+ perguntasAtuais = embaralhar(bancoPerguntas).slice(0,5);
+
+ perguntasAtuais.forEach((item,index)=>{
+   const bloco = document.createElement("div");
+   bloco.className = "question";
+
+   let html = `<h3>${index+1}. ${item.pergunta}</h3>`;
+
+   const opcoes = embaralhar(item.opcoes.map((texto,i)=>({texto,original:i})));
+
+   opcoes.forEach(op=>{
+      html += `
+      <label>
+        <input type="radio" name="q${index}" value="${op.original}">
+        ${op.texto}
+      </label>`;
+   });
+
+   bloco.innerHTML = html;
+   area.appendChild(bloco);
+ });
+}
+
+function corrigirQuiz(){
+ let pontos = 0;
+
+ document.querySelectorAll("label").forEach(l=>{
+   l.classList.remove("correct","wrong","sem-resposta");
+   const fb = l.querySelector(".feedback");
+   if(fb) fb.remove();
+ });
+
+ perguntasAtuais.forEach((item,index)=>{
+   const marcada = document.querySelector(`input[name="q${index}"]:checked`);
+   const alternativas = document.querySelectorAll(`input[name="q${index}"]`);
+
+   alternativas.forEach(input=>{
+     const label = input.parentElement;
+
+     if(Number(input.value) === item.correta){
+       label.classList.add("correct");
+       const span = document.createElement("span");
+       span.className = "feedback ok";
+       span.textContent = "Resposta correta";
+       label.appendChild(span);
+     }
+   });
+
+   if(marcada){
+     const labelMarcada = marcada.parentElement;
+
+     if(Number(marcada.value) === item.correta){
+       pontos++;
+     } else {
+       labelMarcada.classList.add("wrong");
+       const span = document.createElement("span");
+       span.className = "feedback erro";
+       span.textContent = "Sua resposta";
+       labelMarcada.appendChild(span);
+     }
+   } else {
+     const primeira = alternativas[0].parentElement;
+     primeira.classList.add("sem-resposta");
+     const span = document.createElement("span");
+     span.className = "feedback erro";
+     span.textContent = "Você não marcou essa questão";
+     primeira.appendChild(span);
+   }
+ });
+
+ const resultado = document.getElementById("resultado");
+ const texto = document.getElementById("textoResultado");
+
+ let mensagem = "";
+
+ if(pontos === perguntasAtuais.length){
+   mensagem = `🔥 Você acertou ${pontos} de ${perguntasAtuais.length}. Rodada perfeita!`;
+ } else if(pontos >= 3){
+   mensagem = `👏 Você acertou ${pontos} de ${perguntasAtuais.length}. Bom resultado, revise as questões marcadas em vermelho.`;
+ } else {
+   mensagem = `📚 Você acertou ${pontos} de ${perguntasAtuais.length}. Continue estudando e tente uma nova rodada.`;
+ }
+
+ texto.textContent = mensagem;
+ resultado.style.display = "block";
+ resultado.scrollIntoView({behavior:"smooth", block:"center"});
+}
+
+gerarQuiz();
+
+</script>
+<div style="max-width:900px;margin:40px auto;padding:30px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.1);
+border-radius:24px;
+text-align:center;">
+
+  <h2 style="margin-bottom:15px;">
+    Continue explorando o TechBridge
+  </h2>
+
+  <p style="color:#b8c0d9;margin-bottom:25px;">
+    Acesse outras áreas da plataforma e continue aprendendo tecnologia.
+  </p>
+
+  <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;">
+
+    <a href="index.html"
+    style="padding:12px 20px;
+    border-radius:999px;
+    text-decoration:none;
+    background:linear-gradient(90deg,#8b5cf6,#22d3ee);
+    color:white;
+    font-weight:bold;">
+      🏠 Página Inicial
+    </a>
+
+    <a href="aulas.html"
+    style="padding:12px 20px;
+    border-radius:999px;
+    text-decoration:none;
+    border:1px solid #22d3ee;
+    color:#22d3ee;
+    font-weight:bold;">
+      🎥 Aulas
+    </a>
+
+    <a href="conteudos.html"
+    style="padding:12px 20px;
+    border-radius:999px;
+    text-decoration:none;
+    border:1px solid #22d3ee;
+    color:#22d3ee;
+    font-weight:bold;">
+      📚 Conteúdos
+    </a>
+
+  </div>
+</div>
+</body>
+</html>

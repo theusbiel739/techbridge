@@ -1,0 +1,346 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+  <title>TechBridge | Questionário Aula 1</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <style>
+:root{
+  --bg:#0b1020; --bg2:#111936; --card:rgba(255,255,255,.06);
+  --purple:#8b5cf6; --cyan:#22d3ee; --text:#f5f7ff;
+  --muted:#b8c0d9; --line:rgba(255,255,255,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(139,92,246,.35), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(34,211,238,.20), transparent 36%),
+    linear-gradient(135deg,var(--bg),var(--bg2));
+  color:var(--text); min-height:100vh;
+}
+header{
+  width:100%; padding:24px 8%; display:flex; align-items:center;
+  justify-content:space-between; border-bottom:1px solid var(--line);
+}
+.logo{font-size:1.4rem;letter-spacing:2px;font-weight:700;color:var(--text);text-decoration:none}
+.logo span{color:var(--cyan)}
+nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:.9rem;transition:.3s}
+nav a:hover, nav a.active{color:var(--cyan)}
+.hero{padding:70px 8% 35px;text-align:center}
+.tag{
+  display:inline-block;padding:8px 14px;border:1px solid rgba(34,211,238,.5);
+  border-radius:999px;color:var(--cyan);font-size:.85rem;margin-bottom:20px;
+  background:rgba(34,211,238,.08);
+}
+h1{font-size:3rem;line-height:1.1;margin-bottom:18px}
+h1 span{background:linear-gradient(90deg,var(--purple),var(--cyan));-webkit-background-clip:text;color:transparent}
+.hero p{color:var(--muted);font-size:1.05rem;line-height:1.7;max-width:760px;margin:0 auto}
+.section{padding:35px 8% 70px}
+.quiz-box{
+  max-width:920px;margin:0 auto;background:var(--card);border:1px solid var(--line);
+  border-radius:30px;padding:34px;box-shadow:0 0 35px rgba(139,92,246,.20);
+}
+.top-quiz{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+.counter{color:var(--cyan);font-weight:700}
+.question{padding:24px 0;border-bottom:1px solid var(--line)}
+.question:last-child{border-bottom:0}
+.question h3{font-size:1.15rem;margin-bottom:16px;color:var(--text)}
+.options{display:grid;gap:12px}
+label{
+  display:block;padding:14px 16px;border:1px solid var(--line);border-radius:16px;
+  color:var(--muted);cursor:pointer;transition:.3s;background:rgba(255,255,255,.04);
+}
+label:hover{border-color:rgba(34,211,238,.55);color:var(--text);transform:translateX(4px)}
+input[type="radio"]{margin-right:10px;accent-color:var(--cyan)}
+.actions{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center}
+.btn{
+  display:inline-block;padding:13px 22px;border-radius:999px;color:var(--text);
+  text-decoration:none;background:linear-gradient(90deg,var(--purple),var(--cyan));
+  font-size:.95rem;font-weight:700;border:none;cursor:pointer;transition:.3s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.secondary{background:transparent;border:1px solid rgba(34,211,238,.55);color:var(--cyan)}
+.result{
+  margin-top:26px;padding:22px;border-radius:22px;border:1px solid rgba(34,211,238,.35);
+  background:rgba(34,211,238,.08);display:none;text-align:center;
+}
+.result h2{margin-bottom:10px;color:var(--cyan)}
+.result p{color:var(--muted);line-height:1.7}
+.correct{
+  background:rgba(34,197,94,.30)!important;
+  border:2px solid #22c55e!important;
+  box-shadow:0 0 18px rgba(34,197,94,.45);
+  color:#ffffff!important;
+}
+.wrong{
+  background:rgba(239,68,68,.30)!important;
+  border:2px solid #ef4444!important;
+  box-shadow:0 0 18px rgba(239,68,68,.45);
+  color:#ffffff!important;
+}
+.correct::before{content:"✅ ";font-weight:bold}
+.wrong::before{content:"❌ ";font-weight:bold}
+.feedback{display:block;margin-top:8px;font-size:.9rem;font-weight:bold}
+.feedback.ok{color:#86efac}
+.feedback.erro{color:#fca5a5}
+.nav-final{
+  max-width:920px;margin:34px auto 0;padding:28px;text-align:center;
+  background:var(--card);border:1px solid var(--line);border-radius:24px;
+}
+.nav-final h2{margin-bottom:12px}
+.nav-final p{color:var(--muted);margin-bottom:20px;line-height:1.7}
+.nav-final div{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{padding:28px 8%;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
+@media(max-width:800px){
+  h1{font-size:2.35rem} header{flex-direction:column;gap:18px}
+  nav a{margin:0 8px}
+}
+@media(max-width:600px){
+  .quiz-box{padding:24px} h1{font-size:2rem}
+  nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px} nav a{margin:0}
+}
+</style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">TECH<span>BRIDGE</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="aulas.html">Aulas</a>
+      <a href="conteudos.html">Conteúdos</a>
+      <a href="questionarioAula1.html" class="active">Questionário</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <span class="tag">Aula 1 — O que é tecnologia?</span>
+    <h1>Questionário Aula 1 <span>TechBridge</span></h1>
+    <p>Perguntas sobre tecnologia no cotidiano, inclusão digital e uso básico de ferramentas digitais.</p>
+  </section>
+
+  <section class="section">
+    <form class="quiz-box" id="quizForm">
+      <div class="top-quiz">
+        <div class="counter" id="contador">5 perguntas sorteadas</div>
+        <button type="button" class="btn secondary" onclick="gerarQuiz()">Gerar novas perguntas</button>
+      </div>
+
+      <div id="perguntas"></div>
+
+      <div class="actions">
+        <button type="button" class="btn" onclick="corrigirQuiz()">Enviar respostas</button>
+        <button type="button" class="btn secondary" onclick="gerarQuiz()">Tentar outra rodada</button>
+      </div>
+
+      <div class="result" id="resultado">
+        <h2>Resultado</h2>
+        <p id="textoResultado"></p>
+      </div>
+    </form>
+
+    <div class="nav-final">
+      <h2>Continue aprendendo</h2>
+      <p>Volte para as aulas, revise os conteúdos ou faça outro questionário.</p>
+      <div>
+        <a href="aulas.html" class="btn">🎥 Ver aulas</a>
+        <a href="conteudos.html" class="btn secondary">📚 Conteúdos</a>
+        <a href="index.html" class="btn secondary">🏠 Página inicial</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>TechBridge © 2026 | Aprendizado Digital</footer>
+
+  <script>
+    const bancoPerguntas = [
+      {
+            "pergunta": "O que é tecnologia?",
+            "opcoes": [
+                  "Um conjunto de ferramentas e conhecimentos que ajudam a resolver problemas.",
+                  "Apenas computadores caros.",
+                  "Somente redes sociais."
+            ],
+            "correta": 0
+      },
+      {
+            "pergunta": "Onde a tecnologia aparece no dia a dia?",
+            "opcoes": [
+                  "No celular, computador, aplicativos e internet.",
+                  "Apenas em laboratórios.",
+                  "Somente em jogos."
+            ],
+            "correta": 0
+      },
+      {
+            "pergunta": "Como a tecnologia pode ajudar nos estudos?",
+            "opcoes": [
+                  "Facilitando pesquisas, aulas online e organização.",
+                  "Impedindo o aprendizado.",
+                  "Substituindo todo esforço do aluno."
+            ],
+            "correta": 0
+      },
+      {
+            "pergunta": "Qual é um exemplo de tecnologia no trabalho?",
+            "opcoes": [
+                  "Usar e-mail, planilhas e reuniões online.",
+                  "Guardar papel em uma gaveta.",
+                  "Desligar todos os aparelhos."
+            ],
+            "correta": 0
+      },
+      {
+            "pergunta": "O que é inclusão digital?",
+            "opcoes": [
+                  "Permitir acesso e aprendizado sobre tecnologia.",
+                  "Impedir pessoas de usarem internet.",
+                  "Usar tecnologia apenas para diversão."
+            ],
+            "correta": 0
+      },
+      {
+            "pergunta": "Por que aprender tecnologia básica é importante?",
+            "opcoes": [
+                  "Ajuda no trabalho, comunicação e acesso a serviços.",
+                  "Serve apenas para programadores.",
+                  "Não tem utilidade no cotidiano."
+            ],
+            "correta": 0
+      },
+      {
+            "pergunta": "Qual destes é um dispositivo tecnológico?",
+            "opcoes": [
+                  "Celular.",
+                  "Copo.",
+                  "Caderno comum sem recurso digital."
+            ],
+            "correta": 0
+      },
+      {
+            "pergunta": "A internet pode ser usada para:",
+            "opcoes": [
+                  "Pesquisar, estudar, trabalhar e se comunicar.",
+                  "Apenas ouvir música.",
+                  "Somente jogar."
+            ],
+            "correta": 0
+      },
+      {
+            "pergunta": "Qual atitude mostra autonomia digital?",
+            "opcoes": [
+                  "Conseguir usar ferramentas digitais com mais confiança.",
+                  "Depender sempre de outra pessoa para tudo.",
+                  "Evitar qualquer tecnologia."
+            ],
+            "correta": 0
+      },
+      {
+            "pergunta": "O TechBridge busca ajudar pessoas a:",
+            "opcoes": [
+                  "Aprender tecnologia de forma simples e acessível.",
+                  "Comprar equipamentos caros.",
+                  "Evitar o uso de tecnologia."
+            ],
+            "correta": 0
+      }
+];
+
+    let perguntasAtuais = [];
+
+    function embaralhar(array){
+      return [...array].sort(() => Math.random() - 0.5);
+    }
+
+    function gerarQuiz(){
+      const area = document.getElementById("perguntas");
+      const resultado = document.getElementById("resultado");
+      resultado.style.display = "none";
+      area.innerHTML = "";
+
+      perguntasAtuais = embaralhar(bancoPerguntas).slice(0, 5);
+
+      perguntasAtuais.forEach((item, index) => {
+        const bloco = document.createElement("div");
+        bloco.className = "question";
+
+        let html = `<h3>${index + 1}. ${item.pergunta}</h3><div class="options">`;
+        const opcoes = embaralhar(item.opcoes.map((texto, i) => ({texto, original:i})));
+
+        opcoes.forEach((opcao) => {
+          html += `
+            <label>
+              <input type="radio" name="q${index}" value="${opcao.original}">
+              ${opcao.texto}
+            </label>
+          `;
+        });
+
+        html += "</div>";
+        bloco.innerHTML = html;
+        area.appendChild(bloco);
+      });
+
+      document.getElementById("contador").textContent =
+        `${perguntasAtuais.length} perguntas sorteadas de ${bancoPerguntas.length}`;
+    }
+
+    function corrigirQuiz(){
+      let pontos = 0;
+      const total = perguntasAtuais.length;
+
+      document.querySelectorAll("label").forEach(label => {
+        label.classList.remove("correct", "wrong");
+        const fb = label.querySelector(".feedback");
+        if(fb) fb.remove();
+      });
+
+      perguntasAtuais.forEach((item, index) => {
+        const marcada = document.querySelector(`input[name="q${index}"]:checked`);
+        const alternativas = document.querySelectorAll(`input[name="q${index}"]`);
+
+        alternativas.forEach(input => {
+          const label = input.parentElement;
+          if(Number(input.value) === item.correta){
+            label.classList.add("correct");
+            const span = document.createElement("span");
+            span.className = "feedback ok";
+            span.textContent = "Resposta correta";
+            label.appendChild(span);
+          }
+        });
+
+        if(marcada){
+          const labelMarcada = marcada.parentElement;
+          if(Number(marcada.value) === item.correta){
+            pontos++;
+          } else {
+            labelMarcada.classList.add("wrong");
+            const span = document.createElement("span");
+            span.className = "feedback erro";
+            span.textContent = "Sua resposta";
+            labelMarcada.appendChild(span);
+          }
+        }
+      });
+
+      const resultado = document.getElementById("resultado");
+      const texto = document.getElementById("textoResultado");
+
+      if(pontos === total){
+        texto.textContent = `🔥 Você acertou ${pontos} de ${total}. Excelente!`;
+      } else if(pontos >= 3){
+        texto.textContent = `👏 Você acertou ${pontos} de ${total}. Bom resultado! Revise as marcações em vermelho.`;
+      } else {
+        texto.textContent = `📚 Você acertou ${pontos} de ${total}. Continue estudando e tente outra rodada.`;
+      }
+
+      resultado.style.display = "block";
+      resultado.scrollIntoView({behavior:"smooth", block:"center"});
+    }
+
+    gerarQuiz();
+  </script>
+</body>
+</html>
