@@ -3,19 +3,19 @@
 <head>
   <title>TechBridge | Questionário Aula 1</title>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
 :root{
   --bg:#0b1020; --bg2:#111936; --card:rgba(255,255,255,.06);
-  --purple:#8b5cf6; --cyan:#22d3ee; --text:#f5f7ff;
+  --purple:#0070d1; --cyan:#53b1ff; --text:#f5f7ff;
   --muted:#b8c0d9; --line:rgba(255,255,255,.12);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{
   font-family:Arial, Helvetica, sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(139,92,246,.35), transparent 34%),
-    radial-gradient(circle at bottom right, rgba(34,211,238,.20), transparent 36%),
+    radial-gradient(circle at top left, rgba(0,112,209,.35), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(83,177,255,.20), transparent 36%),
     linear-gradient(135deg,var(--bg),var(--bg2));
   color:var(--text); min-height:100vh;
 }
@@ -29,9 +29,9 @@ nav a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:.9rem;t
 nav a:hover, nav a.active{color:var(--cyan)}
 .hero{padding:70px 8% 35px;text-align:center}
 .tag{
-  display:inline-block;padding:8px 14px;border:1px solid rgba(34,211,238,.5);
+  display:inline-block;padding:8px 14px;border:1px solid rgba(83,177,255,.5);
   border-radius:999px;color:var(--cyan);font-size:.85rem;margin-bottom:20px;
-  background:rgba(34,211,238,.08);
+  background:rgba(83,177,255,.08);
 }
 h1{font-size:3rem;line-height:1.1;margin-bottom:18px}
 h1 span{background:linear-gradient(90deg,var(--purple),var(--cyan));-webkit-background-clip:text;color:transparent}
@@ -39,7 +39,7 @@ h1 span{background:linear-gradient(90deg,var(--purple),var(--cyan));-webkit-back
 .section{padding:35px 8% 70px}
 .quiz-box{
   max-width:920px;margin:0 auto;background:var(--card);border:1px solid var(--line);
-  border-radius:30px;padding:34px;box-shadow:0 0 35px rgba(139,92,246,.20);
+  border-radius:30px;padding:34px;box-shadow:0 0 35px rgba(0,112,209,.20);
 }
 .top-quiz{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px;flex-wrap:wrap}
 .counter{color:var(--cyan);font-weight:700}
@@ -51,7 +51,7 @@ label{
   display:block;padding:14px 16px;border:1px solid var(--line);border-radius:16px;
   color:var(--muted);cursor:pointer;transition:.3s;background:rgba(255,255,255,.04);
 }
-label:hover{border-color:rgba(34,211,238,.55);color:var(--text);transform:translateX(4px)}
+label:hover{border-color:rgba(83,177,255,.55);color:var(--text);transform:translateX(4px)}
 input[type="radio"]{margin-right:10px;accent-color:var(--cyan)}
 .actions{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center}
 .btn{
@@ -60,10 +60,10 @@ input[type="radio"]{margin-right:10px;accent-color:var(--cyan)}
   font-size:.95rem;font-weight:700;border:none;cursor:pointer;transition:.3s;
 }
 .btn:hover{transform:translateY(-2px)}
-.btn.secondary{background:transparent;border:1px solid rgba(34,211,238,.55);color:var(--cyan)}
+.btn.secondary{background:transparent;border:1px solid rgba(83,177,255,.55);color:var(--cyan)}
 .result{
-  margin-top:26px;padding:22px;border-radius:22px;border:1px solid rgba(34,211,238,.35);
-  background:rgba(34,211,238,.08);display:none;text-align:center;
+  margin-top:26px;padding:22px;border-radius:22px;border:1px solid rgba(83,177,255,.35);
+  background:rgba(83,177,255,.08);display:none;text-align:center;
 }
 .result h2{margin-bottom:10px;color:var(--cyan)}
 .result p{color:var(--muted);line-height:1.7}
@@ -110,7 +110,7 @@ footer{padding:28px 8%;text-align:center;color:var(--muted);border-top:1px solid
       <a href="sobre.html">Sobre</a>
       <a href="aulas.html">Aulas</a>
       <a href="conteudos.html">Conteúdos</a>
-      <a href="questionarioAula1.html" class="active">Questionário</a>
+      <a href="questionarioaula1.html" class="active">Questionário</a>
     </nav>
   </header>
 
