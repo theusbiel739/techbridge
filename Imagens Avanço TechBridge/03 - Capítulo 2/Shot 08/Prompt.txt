@@ -1,0 +1,37 @@
+Use case: stylized-concept image edit and sequential cinematic world-building frame.
+Asset type: TechBridge Journey official Journey Shot 08.
+
+Input image roles:
+- Image 1 is the approved Journey Shot 07 and is the edit target and sole authority for camera continuity, immediate composition, current learning infrastructure, lighting progression and narrative state.
+- Image 2 is the permanent Official City reference and is authoritative for the contemporary Brazilian city identity, urban materials, parks, universities and cultural facilities. It intentionally matches the approved city state in Shot 07.
+- Image 3 is the permanent Official Bridge reference and is authoritative for the bridge’s pale-concrete structure, curve, slender metal guardrail, proportions, integrated vegetation, materials and architectural identity.
+- Image 4 is the permanent Official Community reference and is authoritative only for the Brazilian hillside community, Atlantic Forest integration, domestic scale and color character. Ignore its old rectangular gateway and do not copy that gateway or its bridge configuration.
+- Image 5 is the permanent Official Journey Landmark reference and is authoritative only for landmark identity if any distant completed landmark is incidentally visible. Do not add a new landmark in this shot and never create a rectangular portal.
+
+Primary request: Continue the exact same walk approximately 100 meters farther forward from Image 1 along the same bridge. This is the next frame in one continuous sequence, not a recreated world. The camera represents the user and has physically moved about 100 meters forward: natural human eye height, centered on the bridge axis, neutral lens, same direction toward the same distant city. Make progress readable through natural parallax, perspective and the continuing curve—not by artificially enlarging or moving the city.
+
+Continuity invariants: preserve the exact TechBridge stylized realism, bridge identity, patterned paving, pale warm concrete, brushed-metal horizontal guardrails, integrated warm-wood furniture, discreet gardens, river, Atlantic Forest, community, mountains, city, geographic relationships, atmospheric depth, scale, color palette and late-morning lighting. Architecture remains practically unchanged. Never redesign or restart the universe.
+
+Existing learning infrastructure: continue the infrastructure established in Shot 07 naturally and at the same restrained scale—one small open library niche integrated into a guardrail/planter module, one modest shared study table, an extremely discreet open-air coworking surface, a small amphitheater made of only a few integrated steps, and quiet blank physical information panels. These elements must remain part of the bridge engineering, never separate buildings. Do not add a new large element, pavilion, roof, stage, campus, plaza, café, shopping area or park. The continuous bridge path must stay broad, open and visually dominant.
+
+Narrative focus — collaboration: include a small number of diverse contemporary Brazilian inhabitants in spontaneous daily activity, secondary to the bridge:
+1. Exactly two people working together at the shared table, jointly analyzing one laptop and a few handwritten notes; no readable text.
+2. Exactly one mentor conducting a relaxed informal conversation with exactly two young people on or beside the small amphitheater steps; no presentation and no audience.
+3. Exactly one person studying alone on a bench farther ahead along the path.
+4. Exactly two additional people walking naturally and calmly, separated from the groups.
+Total: exactly eight people, no one else. Nobody looks at the camera or poses. Show natural Brazilian diversity in skin tones, hair textures, ages and understated everyday clothing. No crowd, celebration, lecture or staged event.
+
+World progression: keep the Official Community visible and recognizable in the far background as a quiet memory of origin, smaller only because the camera moved. Keep the Official City clearly distant with substantial bridge remaining. Reveal only a little more detail in the already established contemporary Brazilian city: human-scale universities, cultural centers, public libraries and large green public parks, with exposed concrete, light stucco, balconies, brise-soleil, shaded public spaces and tropical/subtropical vegetation. Preserve the official skyline identity; no generic international skyline, luxury masterplan, Dubai, Singapore or Vancouver appearance.
+
+Energy: extremely discreet, limited to one or two hairline warm-white / soft-gold details embedded in floor joints, edge beams or guardrail connections. Never on people, books, notes, trees, water or sky. No dominant glow.
+
+Lighting/mood: continue naturally toward the end of the morning with only a subtle evolution from Shot 07. Preserve the same sun direction, soft atmospheric depth, warm highlights and calm optimistic identity. Emotional message: “Aprender abre portas. Colaborar cria oportunidades.”
+
+Composition: 1536x1024 landscape, central eye-level perspective, strong natural leading lines, bridge and collaborative environment remain dominant, horizon important, calm and uncluttered. No text, readable notes, signs, chapter labels, logos, interface, HUD, screens other than the single laptop, holograms, particles, neon, blue sci-fi light, portal effects, spectacle, fisheye, cinematic distortion, new bridge type, new landmark or new universe. Only continue the walk.
+
+
+Precise single-person insertion edit of the current Journey Shot 08. Treat the entire image as locked. Preserve exactly the 1536x1024 crop, eye-level centered camera, bridge geometry and curve, paving, guardrails, open library, blank physical panels, shared table, coworking furniture, amphitheater steps, all seven existing people and their exact poses and positions, vegetation, river, Brazilian hillside community, official contemporary Brazilian city, mountains, sky, lighting, shadows, colors, materials and subtle energy lines.
+
+Add exactly one missing person studying alone, bringing the total to exactly eight people. Place this person small and clearly farther ahead along the bridge, seated naturally on a discreet existing-style built-in bench or low integrated planter edge beside the path, without blocking circulation. They should be quietly studying alone with a closed or partially open notebook/book and no readable text. Natural contemporary Brazilian appearance and understated clothing, candid posture, not looking at the camera, visually secondary and much smaller than the foreground groups.
+
+Do not add any other person. Do not remove or change the existing two collaborators at the laptop, the mentor with exactly two young people, or the two walkers. Do not add a new large architectural element; if a minimal seat edge is needed, it must match and merge with the existing pale-concrete planter/bench system. Change nothing else. No text, signs, screens, UI, logos or effects.

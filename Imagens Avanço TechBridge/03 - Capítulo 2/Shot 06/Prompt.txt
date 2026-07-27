@@ -1,0 +1,19 @@
+Use case: stylized-concept image edit and sequential cinematic world-building frame.
+Asset type: TechBridge Journey official Journey Shot 06.
+Input image: the provided approved Journey Shot 05 is the locked visual foundation and sole continuity source.
+
+Primary request: Continue the exact same walk approximately 100 meters farther forward along this same bridge. This is the next frame in one continuous sequence, not a new location and not a reinterpretation. The camera represents the user and has physically moved about 100 meters forward: natural human eye height, centered on the bridge axis, neutral lens, same forward direction toward the same city. Make the advance readable through natural perspective, parallax, the bridge curve and the more distant previous foreground—not by artificially enlarging or moving the city.
+
+Continuity invariants — preserve rigorously: identical TechBridge stylized realism; identical official pale-concrete bridge architecture, width and curve; identical patterned paving; identical slim brushed-metal horizontal guardrails; identical integrated planter and bench language; identical river, Atlantic Forest, recognizable Brazilian hillside community, city, mountains, sky and geographic relationships; identical warm, quiet palette and materials. Do not redesign the bridge, community, city or world. Do not introduce a new landmark or a different bridge system.
+
+Evolution of the current bridge segment: show only silent maturation. Gardens are slightly more consolidated and mature than in Shot 05, with fuller but controlled Brazilian vegetation. Add restrained integrated rest areas and built-in furniture using the exact existing pale-concrete and warm-wood language. Preserve generous clear walking space and visual calm. Any architectural addition must grow naturally from the bridge edge beams and planters, never look placed on top, and never turn the bridge into a park, plaza or theme attraction.
+
+People: retain approximately the same low population density as Shot 05—no significant increase. Show only a few users distributed naturally and candidly: some walking, one seated using the space, one quiet conversation or study moment. Natural Brazilian diversity in skin tones, ages, hair textures and everyday clothing. Nobody looks at the camera or poses. No crowd. People remain secondary to the bridge.
+
+World progression: the same community remains visible and recognizable as the origin, now slightly farther away solely because the camera moved. The same city is slightly clearer but still distant and not yet reached. Reveal, within its existing urban fabric and without changing the skyline, more legible contemporary Brazilian university buildings, innovation centers, libraries and green parks. They must feel human and integrated with nature, not wealthy, monumental, futuristic or corporate.
+
+Energy: extremely discreet, restricted to one or two hairline warm-white / soft-gold details embedded in structural edges, guardrail connections or floor joints. No strong glow and no energy on sky, trees, water or people.
+
+Lighting/mood: continue naturally toward late morning with only a subtle progression from Shot 05. Maintain the same sun direction, soft atmospheric depth, warm highlights and calm optimistic identity. No abrupt time jump, no dramatic golden-hour shift. Emotional message: “Cada passo transforma o caminho em algo mais familiar.” The feeling is silent evolution, familiarity, belonging, continuity and hope.
+
+Composition: 1536x1024 landscape, central eye-level bridge perspective, strong natural leading lines, bridge remains the absolute protagonist, horizon important, uncluttered and calm. No text, signs, chapter labels, interface, HUD, holograms, particles, neon, blue sci-fi light, portal effects, spectacle, fisheye, cinematic distortion, new structures or new scenario. Never restart the universe; only continue the walk.

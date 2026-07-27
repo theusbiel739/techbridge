@@ -1,0 +1,45 @@
+Use case: stylized-concept image edit and sequential cinematic world-building frame.
+Asset type: TechBridge Journey — official contemplative shot immediately after Marco da Jornada 02.
+
+INPUT IMAGE ROLES — FOLLOW STRICTLY:
+- Image 1 is the approved Marco da Jornada 02 frame and is the PRIMARY CONTINUITY BASE. It establishes the exact camera path, bridge state, Chapter 2 infrastructure, people density, materials, late-morning light, atmosphere and narrative position immediately before crossing.
+- Image 2 is the permanent OFFICIAL CITY reference, authoritative for the contemporary Brazilian urban identity: humane medium-rise buildings, universities, cultural centers, libraries, parks and tropical public spaces.
+- Image 3 is the permanent OFFICIAL BRIDGE reference, authoritative for bridge geometry, pale warm concrete, patterned paving, brushed-metal horizontal guardrails, integrated vegetation, proportions, elegant curve and silent technology.
+- Image 4 is ONLY the permanent OFFICIAL COMMUNITY reference: warm Brazilian hillside community integrated with Atlantic Forest. Ignore and never reproduce its obsolete rectangular portal or bridge configuration.
+- Image 5 is the exact permanent OFFICIAL MARCO design and overrides every other gateway shape: two monumental asymmetric tapered pale-concrete structural blades, left blade taller and slender, right blade slightly shorter and broader, subtle lower inward bends, long narrow vertical incisions, and one thin high brushed-metal crossbeam. Do not redesign it.
+
+PRIMARY REQUEST — REVERSE CONTEMPLATIVE VIEW:
+Continue physically and narratively from Image 1. The user has just walked through Marco da Jornada 02, moved only about 6–10 meters beyond it, stopped, and smoothly rotated the camera approximately 180 degrees to look backward along the exact bridge route already traveled during Chapter 2. This is the first backward-looking shot in the sequence. Do not make a new location or independent composition.
+
+CAMERA:
+Human eye height about 1.65 meters, exactly centered on the bridge axis, level horizon, neutral 40–50 mm lens, natural perspective, no fisheye or cinematic distortion. The camera is now on the far side of the Marco facing back toward the completed Chapter 2 route. The Marco stands behind the user in narrative terms but appears directly ahead of the reversed camera, about 6–10 meters away, between camera and the long receding bridge. Show its complete official silhouette, large but fully inside the frame, seen naturally from its reverse side. Through and around its opening, reveal the long distance already walked.
+
+MARCO AND STRUCTURE:
+Preserve the exact approved asymmetric Marco architecture and scale. It must remain completely integrated into the bridge engineering, its blades continuing through the deck into the bridge edge girders. No pedestal, freestanding sculpture, separate platform, rectangular portal, arch or gateway redesign. The bridge path passes naturally between the blades. The Marco marks the completed stage without dominating like a magical portal.
+
+LOOKING BACK AT CHAPTER 2:
+Beyond the Marco, the bridge recedes for a substantial visible distance and shows ONLY the already-established Chapter 2 infrastructure, distributed naturally and becoming smaller with distance:
+- the same small open library integrated into a guardrail/planter module;
+- the same restrained shared study tables;
+- the same small amphitheater of only a few integrated steps;
+- the same mature linear gardens;
+- the same discreet benches and small social/study spaces.
+These are secondary evidence of progress, not the focus. Do not add, enlarge or redesign any infrastructure. Keep the bridge itself broad, continuous and visually dominant.
+
+PEOPLE:
+Keep only a few inhabitants, no more than 4–5 total, naturally small and dispersed along the receding bridge. A pair may study at an existing table, one person may sit at the existing steps, and one or two may walk. Nobody poses, looks at camera or becomes prominent. Preserve natural contemporary Brazilian diversity without creating a crowd.
+
+WORLD AND SPATIAL CONTINUITY:
+This is a genuine reverse view after a 180-degree camera rotation. The official contemporary Brazilian city should appear only as a distant lateral background across the broad bay and surrounding urban geography, optically farther and less dominant than in the forward-facing shot; do not place it as the destination centered ahead and do not artificially enlarge it. Keep its official Brazilian character, never a generic international skyline. The official hillside community is now extremely distant, almost absorbed into the forested hills and atmospheric depth, barely recognizable as the origin. Preserve water, Atlantic Forest, mountains, geography and the bridge’s established curve. The long receding bridge and its accumulated spaces must provide the strongest evidence of distance traveled.
+
+LIGHTING:
+Same exact late-morning time, weather, palette and stylized realism as Image 1. Because the camera has turned 180 degrees, sunlight now strikes the opposite visible faces of the Marco, people and guardrails; this is physically correct reverse-view continuity, not a new time of day. Soft warm natural light, calm atmospheric depth, serenity, quiet pride and contemplation. No dramatic sunset treatment.
+
+ENERGY:
+Extremely discreet. Preserve only hairline warm-white and soft-gold light inside the Marco’s narrow incisions and at one or two nearby structural joints. Any distant bridge energy is nearly invisible. No glow aura, blue light, particles, arcs or special effects.
+
+EMOTIONAL MESSAGE:
+Silently communicate: “Olhe o quanto você já caminhou. Agora continue.” The emotional balance is serenity, earned pride, contemplation and forward motivation, without celebration or spectacle.
+
+CONTINUITY INVARIANTS:
+Preserve the exact TechBridge stylized realism, official bridge identity, materials, scale, vegetation language, city identity, community identity, geographic relationships, people scale, color grading and late-morning atmosphere. No text, chapter labels, signs with readable content, interface, HUD, logos, holograms, neon, cyberpunk, sci-fi, fantasy, new portal, new landmark, new infrastructure, additional deck, new architecture, crowd, event, presentation, stage, plaza, campus, shopping area or theme-park feeling. Do not look forward toward the city. Do not recreate the universe. This must read unmistakably as the reverse-angle continuation taken moments after the approved Marco 02 frame.
