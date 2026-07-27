@@ -1,0 +1,163 @@
+Prompt 1 
+
+"Perfeito.
+
+Vamos transformar esta imagem na referência oficial do TechBridge Journey.
+
+Não recrie o universo.
+
+Não altere a direção artística.
+
+Não mude a arquitetura da ponte.
+
+Não mude a iluminação.
+
+Não mude a identidade visual.
+
+Esta é uma sequência cinematográfica contínua.
+
+--------------------------------------------------
+
+Agora gere o próximo Journey Shot.
+
+Capítulo 1 — Shot 02 — Primeiros Passos.
+
+Imagine que o usuário concluiu as primeiras atividades do capítulo e caminhou aproximadamente 100 a 150 metros pela ponte.
+
+A câmera continua exatamente na altura dos olhos, centralizada sobre a ponte, apenas avançando naturalmente ao longo da travessia.
+
+--------------------------------------------------
+
+Mantenha exatamente:
+
+• a mesma ponte;
+• o mesmo guarda-corpo;
+• os mesmos materiais;
+• a mesma linguagem arquitetônica;
+• a mesma cidade;
+• a mesma comunidade;
+• o mesmo horário da manhã;
+• a mesma atmosfera.
+
+--------------------------------------------------
+
+A evolução deve ser extremamente sutil.
+
+Adicionar apenas pequenas mudanças naturais, como:
+
+• um pequeno jardim integrado à ponte;
+• um banco discreto;
+• vegetação um pouco mais desenvolvida;
+• poucas pessoas caminhando;
+• uma pessoa observando a paisagem;
+• uma pessoa lendo sentada.
+
+A comunidade continua claramente visível, mas agora um pouco mais distante devido ao avanço da câmera.
+
+A cidade continua distante, porém ligeiramente mais nítida.
+
+--------------------------------------------------
+
+A energia continua extremamente discreta.
+
+Apenas um filete muito suave integrado ao piso ou ao guarda-corpo.
+
+Nada chamativo.
+
+Nada futurista.
+
+--------------------------------------------------
+
+IMPORTANTE
+
+Não adicionar textos.
+
+Não adicionar placas.
+
+Não adicionar interface.
+
+Não adicionar HUD.
+
+Não adicionar hologramas.
+
+Não alterar a composição geral.
+
+Não criar um novo cenário.
+
+Apenas avance naturalmente pela mesma ponte, como se esta imagem tivesse sido capturada poucos minutos depois da anterior."
+
+
+
+
+Prompt 2 
+"A evolução está no caminho certo.
+
+Agora faça apenas um refinamento.
+
+Não recrie a imagem.
+
+Não altere o estilo artístico.
+
+Não altere a arquitetura da ponte.
+
+Não altere a iluminação.
+
+Não altere a cidade.
+
+Não altere a comunidade.
+
+Não altere os materiais.
+
+Não altere o banco.
+
+Não altere as pessoas.
+
+--------------------------------------------------
+
+O objetivo desta versão é apenas transmitir que o usuário caminhou um trecho maior da ponte.
+
+A câmera deve avançar naturalmente aproximadamente mais 80 a 100 metros em relação ao Shot anterior.
+
+A sensação deve ser de que o usuário realmente percorreu um trecho significativo da ponte.
+
+O ponto de fuga deve ficar visivelmente mais distante do início da travessia, mantendo exatamente a mesma direção da câmera.
+
+A ponte continua sendo a protagonista absoluta.
+
+--------------------------------------------------
+
+As pessoas permanecem discretas.
+
+Apenas poucas pessoas caminhando normalmente.
+
+A pessoa lendo continua sentada.
+
+Nenhuma pessoa deve chamar mais atenção que a própria ponte.
+
+--------------------------------------------------
+
+Toda a composição deve continuar praticamente idêntica.
+
+A única diferença percebida deve ser:
+
+"Estou claramente mais longe do ponto onde comecei."
+
+--------------------------------------------------
+
+IMPORTANTE
+
+Não criar um novo cenário.
+
+Não adicionar novos elementos.
+
+Não adicionar decks.
+
+Não adicionar jardins extras.
+
+Não adicionar portais novos.
+
+Não adicionar estruturas novas.
+
+Não alterar a identidade visual.
+
+Apenas avance a câmera ao longo da mesma ponte, preservando completamente o universo já estabelecido."
